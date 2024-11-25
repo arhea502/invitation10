@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="button.css">
+    <div class="container">
+        <label class="switch">
+            <input id="toggleButton" class="togglesw" type="checkbox" checked="">
+            <div class="indicator left"></div>
+            <div class="indicator right"></div>
+            <div class="button"></div>
+        </label>
+    </div>
+    <script>
+        // Listen for the button click
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            // Disable the button click to avoid multiple triggers during the delay
+            this.style.pointerEvents = 'none';
+          
+            // Wait for 2 seconds before redirecting
+            setTimeout(function() {
+                // Redirect to the new HTML page after 2 seconds
+                window.location.href = 'home.html'; // Replace with your target URL
+            }, 2000); // 2000ms = 2 seconds
+        });
+    </script>
+</body>
+</html>
